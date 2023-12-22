@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class Score : MonoBehaviour
 {
+    //Подсчет количества бутылок
     private float Timer;
     private void OnCollisionEnter(Collision other)
     {

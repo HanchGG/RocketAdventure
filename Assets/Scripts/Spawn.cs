@@ -71,12 +71,14 @@ public class Spawn : MonoBehaviour
         }
         
     }
+    //Метод для астероидов
     public void AsteroidSpawn(GameObject _object, Vector3 a)
     {
         OneMoreAsteroid = Instantiate(_object, a, Quaternion.identity);
         OneMoreAsteroid.transform.LookAt(Raketa);
         OneMoreAsteroid.GetComponent<Rigidbody>().velocity = Speed * Time.deltaTime * OneMoreAsteroid.transform.forward;
     }
+    //Метод для того что надо поворачивать под определенным углом. bool k опеределяет какой угол должен быть у обьекта.
     public void OtherSpawn(GameObject _object, Vector3 a, bool k) 
     {
             GameObject OneMoreHeart = Instantiate(_object, a, Quaternion.identity);

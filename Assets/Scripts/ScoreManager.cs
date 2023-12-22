@@ -10,6 +10,7 @@ using UnityEngine.UI;
 
 public class ScoreManager : MonoBehaviour
 {
+    //Сохранение рекорда в Json
     public SaveData data = new SaveData();
     public string SavePath;
     [SerializeField] Text ScoreText;
@@ -22,7 +23,6 @@ public class ScoreManager : MonoBehaviour
         {
             data = JsonUtility.FromJson<SaveData>(File.ReadAllText(SavePath));
             HighScoreText.text = data.hScore.ToString();
-            //Debug.Log(data.hScore.ToString() + "kkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkk");
         }
         data.OldhScore = data.hScore;
     }
@@ -50,6 +50,8 @@ public class ScoreManager : MonoBehaviour
     }
     
 }
+
+//Это Json с переменными результата
 [System.Serializable]
 public class SaveData
 {

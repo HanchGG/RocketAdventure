@@ -6,6 +6,7 @@ using UnityEngine.UIElements;
 
 public class Asteroid : MonoBehaviour
 {
+    // Скрипт который удаляет астероиды при столкновении, наносит урон когда это необходимо.
     private Transform RaketaTransform;
     private GameObject Raketa;
     private GameObject HP;
@@ -26,7 +27,7 @@ public class Asteroid : MonoBehaviour
             Destroy(gameObject);
         }
     }
-    private void OnCollisionEnter(Collision other)
+    private void OnCollisionEnter(Collision other) //It works when objects collidе only with a rocket
     {
         if (other.gameObject.tag == "Raketa")
             HP.GetComponent<HP>().Score++;

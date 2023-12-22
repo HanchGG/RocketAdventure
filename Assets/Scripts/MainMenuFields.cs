@@ -8,6 +8,7 @@ using UnityEngine.SocialPlatforms;
 
 public class MainMenuFields : MonoBehaviour
 {
+    //пока что не работает, но будет работать. —истема открыти€ окна ввода имени после побити€ рекорда.
     private string input;
     public SaveData Item;
     public Text Count;
