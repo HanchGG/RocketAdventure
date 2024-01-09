@@ -38,12 +38,7 @@ public class ScoreManager : MonoBehaviour
         if (score>data.hScore)
         {
             data.hScore = score;
-            data.CheckStatus = true;
             SaveRecord();
-        }
-        else
-        {
-            data.CheckStatus = false;
         }
 
 
@@ -58,5 +53,4 @@ public class SaveData
     public int OldhScore;
     public string name;
     public int hScore;
-    public bool CheckStatus;
 }

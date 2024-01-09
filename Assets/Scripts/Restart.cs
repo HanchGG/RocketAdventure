@@ -6,7 +6,7 @@ using UnityEngine.SceneManagement;
 public class Restart : MonoBehaviour
 {
     public float Timer;
-
+    public ScoreManager scoreManager = new ScoreManager();
     void Start()
     {
 
@@ -21,8 +21,17 @@ public class Restart : MonoBehaviour
         }
         if (Timer > 2)
         {
-            Timer = 0;
-            SceneManager.LoadScene(0);
+            if (scoreManager.data.hScore > scoreManager.data.OldhScore)
+            {
+                Timer = 0;
+                SceneManager.LoadScene(2);
+            }
+            else
+            {
+                Timer = 0;
+                SceneManager.LoadScene(0);
+            }
+
         }
     }
 

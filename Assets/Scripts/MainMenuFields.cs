@@ -16,12 +16,16 @@ public class MainMenuFields : MonoBehaviour
     public GameObject BG;
     public Text Namea;
 
-    private void Start()
+    private void Awake()
     {
         if (Item.hScore > Item.OldhScore)
         {
-           NormalBG.SetActive(false);
-           BG.SetActive(true);
+            BG.SetActive(true);
+            Debug.Log("122222222222233333333333");
+        }
+        else
+        {
+            BG.SetActive(false);
         }
     }
     void Update()
